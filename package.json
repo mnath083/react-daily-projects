@@ -1,0 +1,11 @@
+{
+  "name": "react-daily-projects-workspace",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npm --prefix day-01-components-jsx run dev",
+    "build": "npm --prefix day-01-components-jsx run build",
+    "lint": "npm --prefix day-01-components-jsx run lint",
+    "preview": "npm --prefix day-01-components-jsx run preview"
+  }
+}
