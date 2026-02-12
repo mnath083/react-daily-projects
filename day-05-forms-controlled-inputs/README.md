@@ -1,105 +1,31 @@
-📘 Day 5 – Forms & Controlled Inputs
-🎯 Learning Objectives
+# Day 5 - Forms and Controlled Inputs
 
-By the end of this day, you will understand:
+## What you learned
+- In React, form inputs should usually be controlled by state.
+- `value` + `onChange` creates a single source of truth.
+- Form submit handlers should prevent page reload and validate input.
 
-How forms work in React
+## Core ideas
+- Controlled inputs keep UI and state synchronized.
+- Form submission should produce immutable state updates.
+- Validation and cleanup (like trimming text) should happen before storing data.
 
-What controlled components are
+## What this project demonstrates
+- Controlled text input and select dropdown.
+- Todo model with `id`, `priority`, and `done` status.
+- Add, toggle, and delete operations with immutable updates.
+- Disabled submit button for invalid input.
 
-Why inputs are connected to state
+## Why this matters
+- Controlled forms are easier to validate, debug, and extend.
+- Structured form data scales better than raw strings.
 
-How React reads user input
+## Practice tasks
+1. Add inline validation message for minimum title length.
+2. Add edit mode to update existing tasks.
+3. Add filter buttons (`all`, `open`, `done`).
 
-🧠 Why Forms Are Different in React
-
-In traditional HTML:
-
-Browser manages input state
-
-In React:
-
-React manages input state
-
-This gives:
-
-Full control
-
-Predictable behavior
-
-Easier validation and submission
-
-🔑 What Is a Controlled Component?
-
-A controlled component is:
-
-An input whose value comes from React state
-
-Every change updates state
-
-React is the single source of truth
-
-🔁 Input Flow in React
-
-User types
-
-onChange fires
-
-State updates
-
-React re-renders
-
-Input value updates
-
-This loop happens for every keystroke.
-
-🛠️ Project Overview – Simple To-Do Input
-
-This project demonstrates:
-
-Controlled text input
-
-Form submission
-
-State-driven UI updates
-
-Rendering submitted values
-
-📌 Key Takeaways
-
-Inputs should be controlled
-
-State stores form data
-
-onChange keeps state in sync
-
-Never let browser control the form
-
-React owns the UI
-
-⚠️ Common Beginner Mistakes
-
-❌ Forgetting value prop
-❌ Forgetting onChange
-❌ Page refresh on submit
-❌ Mutating state arrays
-
-🧪 Practice Assignments
-
-Disable Add button when input is empty
-
-Trim whitespace before adding
-
-Convert tasks to objects with id
-
-Add delete button for tasks
-
-🏁 Completion Criteria
-
-You’re done when:
-
-You understand controlled inputs
-
-You can explain onChange
-
-You know why React owns form state
+## Completion check
+- You can explain what makes an input controlled.
+- You can submit form data without page refresh.
+- You can update lists immutably from form actions.

@@ -1,7 +1,13 @@
-function Footer() {
+type FooterProps = {
+  author: string;
+};
+
+function Footer({ author }: FooterProps) {
   return (
     <footer>
-      <p>© 2026 React Learning</p>
+      <small>
+        Built by {author} | {new Date().getFullYear()}
+      </small>
     </footer>
   );
 }

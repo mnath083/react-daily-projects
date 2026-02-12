@@ -1,14 +1,32 @@
 type ProfileCardProps = {
   name: string;
   role: string;
+  location: string;
+  skills: string[];
+  isAvailable?: boolean;
 };
 
-function ProfileCard({ name, role }: ProfileCardProps) {
+function ProfileCard({
+  name,
+  role,
+  location,
+  skills,
+  isAvailable = true,
+}: ProfileCardProps) {
   return (
-    <div>
-      <h3>{name}</h3>
+    <article>
+      <h2>{name}</h2>
       <p>{role}</p>
-    </div>
+      <p>{location}</p>
+      <p>Status: {isAvailable ? "Open to projects" : "Currently busy"}</p>
+
+      <h3>Skills</h3>
+      <ul>
+        {skills.map((skill) => (
+          <li key={skill}>{skill}</li>
+        ))}
+      </ul>
+    </article>
   );
 }
 

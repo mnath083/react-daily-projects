@@ -1,7 +1,13 @@
-function Header() {
+type HeaderProps = {
+  title: string;
+  subtitle: string;
+};
+
+function Header({ title, subtitle }: HeaderProps) {
   return (
     <header>
-      <h2>React Daily Projects</h2>
+      <h1>{title}</h1>
+      <p>{subtitle}</p>
     </header>
   );
 }
